@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		100D1CF74BFA283B65FCF55E /* Pods_MultiBranch_restaurant_user.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D023AABCCBCD01D27DC362 /* Pods_MultiBranch_restaurant_user.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		24ADF68D2E8DD7C600FD8F3E /* MultiBranch_restaurant_user.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiBranch_restaurant_user.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D023AABCCBCD01D27DC362 /* Pods_MultiBranch_restaurant_user.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiBranch_restaurant_user.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8960E26CF88FCA1DDD0021B /* Pods-MultiBranch_restaurant_user.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiBranch_restaurant_user.release.xcconfig"; path = "Target Support Files/Pods-MultiBranch_restaurant_user/Pods-MultiBranch_restaurant_user.release.xcconfig"; sourceTree = "<group>"; };
+		DF7E0C22506CE0F90CD3995B /* Pods-MultiBranch_restaurant_user.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiBranch_restaurant_user.debug.xcconfig"; path = "Target Support Files/Pods-MultiBranch_restaurant_user/Pods-MultiBranch_restaurant_user.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100D1CF74BFA283B65FCF55E /* Pods_MultiBranch_restaurant_user.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				24ADF68F2E8DD7C600FD8F3E /* MultiBranch_restaurant_user */,
 				24ADF68E2E8DD7C600FD8F3E /* Products */,
+				71D8B8D60F7FDE38BD7E06D3 /* Pods */,
+				A2794C72031AF012CC5B0974 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		71D8B8D60F7FDE38BD7E06D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF7E0C22506CE0F90CD3995B /* Pods-MultiBranch_restaurant_user.debug.xcconfig */,
+				B8960E26CF88FCA1DDD0021B /* Pods-MultiBranch_restaurant_user.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A2794C72031AF012CC5B0974 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84D023AABCCBCD01D27DC362 /* Pods_MultiBranch_restaurant_user.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24ADF6A02E8DD7C700FD8F3E /* Build configuration list for PBXNativeTarget "MultiBranch_restaurant_user" */;
 			buildPhases = (
+				C3AF7CFD36D0C0EE31E1BBAA /* [CP] Check Pods Manifest.lock */,
 				24ADF6892E8DD7C600FD8F3E /* Sources */,
 				24ADF68A2E8DD7C600FD8F3E /* Frameworks */,
 				24ADF68B2E8DD7C600FD8F3E /* Resources */,
+				F012DE96F9D63E3E0F0470D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				24ADF68F2E8DD7C600FD8F3E /* MultiBranch_restaurant_user */,
 			);
 			name = MultiBranch_restaurant_user;
-			packageProductDependencies = (
-			);
 			productName = MultiBranch_restaurant_user;
 			productReference = 24ADF68D2E8DD7C600FD8F3E /* MultiBranch_restaurant_user.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C3AF7CFD36D0C0EE31E1BBAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiBranch_restaurant_user-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F012DE96F9D63E3E0F0470D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiBranch_restaurant_user/Pods-MultiBranch_restaurant_user-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiBranch_restaurant_user/Pods-MultiBranch_restaurant_user-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiBranch_restaurant_user/Pods-MultiBranch_restaurant_user-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24ADF6892E8DD7C600FD8F3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,11 +213,13 @@
 /* Begin XCBuildConfiguration section */
 		24ADF6A12E8DD7C700FD8F3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7E0C22506CE0F90CD3995B /* Pods-MultiBranch_restaurant_user.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MultiBranch_restaurant_user/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -167,11 +242,13 @@
 		};
 		24ADF6A22E8DD7C700FD8F3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8960E26CF88FCA1DDD0021B /* Pods-MultiBranch_restaurant_user.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MultiBranch_restaurant_user/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -229,7 +306,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -292,7 +369,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

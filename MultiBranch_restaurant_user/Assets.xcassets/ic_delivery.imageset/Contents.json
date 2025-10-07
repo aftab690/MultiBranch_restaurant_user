@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "fast-delivery.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
