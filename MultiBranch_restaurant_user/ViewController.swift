@@ -10,9 +10,11 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var emailtxt: UITextField!
-    @IBOutlet weak var passtxt: UITextField!
+//    @IBOutlet weak var txt_Email: UITextField!
+//    @IBOutlet weak var txt_Password: UITextField!
+    @IBOutlet weak var txt_Email: UITextField!
     
+    @IBOutlet weak var txt_Password: UITextField!
     private let viewModel = LoginViewModel()
 
     override func viewDidLoad() {
@@ -21,9 +23,17 @@ class ViewController: UIViewController {
 
 
     @IBAction func btn_login(_ sender: UIButton){
+        if self.txt_Email.text! == "" || self.txt_Password.text! == "" {
+            showAlertMessage(titleStr: Bundle.main.displayName!, messageStr: "Please enter all details")
+        }
+        else if isValidateEmail(email: self.txt_Email.text!) == false {
+            showAlertMessage(titleStr: Bundle.main.displayName!, messageStr: "Please enter valid email address")
+        }else{
+            let product = AddProduct(email: "aftabkhan@gmail.com", password: "123456")
+            viewModel.addProduct(parameters: product)
+        }
         
-        let product = AddProduct(email: "aftabkhan@gmail.com", password: "123456")
-        viewModel.addProduct(parameters: product)
+
         
         
 //        let response = viewModel.validateLogin(email: emailtxt.text, password: passtxt.text)
