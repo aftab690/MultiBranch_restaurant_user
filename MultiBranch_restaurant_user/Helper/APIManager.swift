@@ -42,7 +42,7 @@ final class APIManager {
 //        completion: @escaping ResultHandler<T>
     ) {
         guard let url = type.url else {
-            completion(.failure(.invalidURL)) // I forgot to mention this in the video
+            completion(.failure(.invalidURL))
             return
         }
 

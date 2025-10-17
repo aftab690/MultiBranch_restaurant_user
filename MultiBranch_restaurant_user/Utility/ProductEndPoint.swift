@@ -10,6 +10,7 @@ import Foundation
 enum ProductEndPoint {
     case products // Module - GET
     case addProduct(product: AddProduct) // POST
+    case userSignup(userSignup: SignupRequest) //    POST
 }
 
 // https://fakestoreapi.com/products
@@ -21,6 +22,8 @@ extension ProductEndPoint: EndPointType {
             return "products"
         case .addProduct:
             return "login"
+        case .userSignup:
+        return "register"
         }
     }
 
@@ -29,6 +32,8 @@ extension ProductEndPoint: EndPointType {
         case .products:
             return "https://fakestoreapi.com/"
         case .addProduct:
+            return "https://cyan-barracuda-592662.hostingersite.com/api/"
+        case .userSignup:
             return "https://cyan-barracuda-592662.hostingersite.com/api/"
         }
     }
@@ -43,6 +48,8 @@ extension ProductEndPoint: EndPointType {
             return .get
         case .addProduct:
             return .post
+        case .userSignup:
+            return .post
         }
     }
 
@@ -52,6 +59,8 @@ extension ProductEndPoint: EndPointType {
             return nil
         case .addProduct(let product):
             return product
+        case .userSignup(let userSignup):
+            return userSignup
         }
     }
 

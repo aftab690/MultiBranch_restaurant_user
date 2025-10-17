@@ -7,20 +7,21 @@
 
 import Foundation
 final class LoginViewModel{
-    
-//    var products: [Product] = []
-    
-    var eventHandler: ((_ event: Event) -> Void)?
-    
+    var loginResponse: LoginResponse?
+    var eventHandler: ((_ event: Event) -> Void)? // Data Binding Closure
+
     
     func addProduct(parameters: AddProduct){
+        self.eventHandler?(.loading)
         APIManager.shared.request(
             modelType: LoginResponse.self, // response type
             type: ProductEndPoint.addProduct(product: parameters)) { result in
+                self.eventHandler?(.stopLoading)
                 switch result {
-                case .success(let product):
-                    print(product)
-//                    self.eventHandler?(.newProductAdded(product: product))
+                case .success(let loginResponse):
+                    self.loginResponse = loginResponse
+                    print(self.loginResponse)
+                    self.eventHandler?(.dataLoaded)
                 case .failure(let error):
                     self.eventHandler?(.error(error))
                 }
@@ -29,6 +30,7 @@ final class LoginViewModel{
 }
 
 extension LoginViewModel {
+
     enum Event {
         case loading
         case stopLoading
@@ -36,4 +38,5 @@ extension LoginViewModel {
         case error(Error?)
         case newProductAdded(product: AddProduct)
     }
+
 }
