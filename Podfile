@@ -8,6 +8,9 @@ target 'MultiBranch_restaurant_user' do
   # Pods for MultiBranch_restaurant_user
     pod 'Alamofire'
     pod 'MBProgressHUD'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKLoginKit'
+    pod 'FBSDKShareKit'
 
 end
 

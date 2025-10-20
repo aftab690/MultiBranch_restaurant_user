@@ -8,15 +8,58 @@
 import UIKit
 import Alamofire
 import MBProgressHUD
+import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LoginButtonDelegate{
+    
+    
+    func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: (any Error)?) {
+        
+        
+        let token = result?.token?.tokenString
+        
+        let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields" : "email, name"], tokenString: token, version: nil, httpMethod: .get)
+        
+        request.start(completion: { connection, result, error in
+            print("\(result)")
+        })
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        
+    }
+    
 
     @IBOutlet weak var txt_Email: UITextField!
     @IBOutlet weak var txt_Password: UITextField!
     private let viewModel = LoginViewModel()
-
+    @IBOutlet weak var btn_showPassword: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if let token = AccessToken.current, !token.isExpired {
+            // User is logged in, do work such as go to next view controller.
+            // You can make a Graph API request here to fetch user data
+            
+            let token = token.tokenString
+            
+            let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields" : "email, name"], tokenString: token, version: nil, httpMethod: .get)
+            
+            request.start(completion: { connection, result, error in
+                print("\(result)")
+                print("\(error)")
+            })
+        }
+        
+        
+        
+        let loginButton = FBLoginButton()
+        loginButton.center = view.center
+        loginButton.delegate = self
+        view.addSubview(loginButton)
+        loginButton.permissions = ["public_profile", "email"]
         observeEvent()
     }
 
@@ -39,6 +82,21 @@ class ViewController: UIViewController {
             viewModel.addProduct(parameters: product)
         }
     }
+    
+
+    @IBAction func btnTap_ShowPassword(_ sender: UIButton) {
+        if self.btn_showPassword.image(for: .normal) == UIImage(systemName: "eye.fill") {
+            self.btn_showPassword.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
+            self.txt_Password.isSecureTextEntry = false
+        }
+        else {
+            self.txt_Password.isSecureTextEntry = true
+            self.btn_showPassword.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        }
+    }
+    
+    
+    
     
     func observeEvent() {
         viewModel.eventHandler = { [weak self] event in

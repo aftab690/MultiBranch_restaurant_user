@@ -46,6 +46,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="" image="eye.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="btnTap_ShowPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ymh-Xk-vYi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -146,6 +149,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="86h-tO-FRO"/>
                     <connections>
+                        <outlet property="btn_showPassword" destination="afo-QS-T8E" id="CrZ-AR-9Cs"/>
                         <outlet property="txt_Email" destination="5DR-NF-eme" id="ren-Pa-PwC"/>
                         <outlet property="txt_Password" destination="bcP-SY-J1N" id="F3l-F0-irx"/>
                     </connections>
@@ -355,7 +359,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
