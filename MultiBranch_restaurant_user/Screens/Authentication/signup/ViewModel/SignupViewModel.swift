@@ -9,11 +9,11 @@ import Foundation
 final class SignupViewModel {
     
     //    var products: [Product] = []
-        
         var eventHandler: ((_ event: Event) -> Void)?
+    
         
         
-        func UserSignup(parameters: SignupRequest){
+    func UserSignup(parameters: SignupRequest){
             APIManager.shared.request(
                 modelType: SignupResponse.self, // response type
                 type: ProductEndPoint.userSignup(userSignup: parameters)) { result in

@@ -15,7 +15,7 @@ struct SignupRequest : Codable{
     var google_id:String?
     var facebook_id:String?
     var login_type:String
-    var register_type:String
+    var register_type:String?
     var referral_code:String?
     
     

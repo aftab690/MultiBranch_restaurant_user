@@ -38,7 +38,7 @@ class SignupVC: UIViewController {
         
         
         
-    }
+}
     
     
     

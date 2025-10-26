@@ -7,48 +7,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "17580980-ECFE-4EAB-9F36-3BCB1F8D4659"
+            uuid = "F91FA365-6F94-43F4-9578-E3AA8094B3B2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MultiBranch_restaurant_user/Screens/Authentication/Login/View/Controller/ViewController.swift"
+            filePath = "MultiBranch_restaurant_user/Screens/Authentication/signup/ViewModel/SignupViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "UserSignup(parameters:isLoggedInWithFacebook:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7CE939AA-29BE-452B-BF51-26D95AC1BADD"
+            uuid = "8AF54CDB-F7E8-429F-91CC-8E3F82C67B44"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MultiBranch_restaurant_user/Screens/Authentication/Login/View/Controller/ViewController.swift"
+            filePath = "MultiBranch_restaurant_user/Screens/Authentication/signup/ViewModel/SignupViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "loginButton(_:didCompleteWith:error:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "UserSignup(parameters:isLoggedInWithFacebook:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4451F6A8-FD6E-4C3F-AAA6-85D1C62947DB"
+            uuid = "78F5EE6D-2A43-4BD6-8A38-937F691B2BC6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MultiBranch_restaurant_user/Screens/Authentication/Login/View/Controller/ViewController.swift"
+            filePath = "MultiBranch_restaurant_user/Screens/Authentication/signup/ViewModel/SignupViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "UserSignup(parameters:isLoggedInWithFacebook:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98F3376B-1853-4100-A022-73FADB5455AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MultiBranch_restaurant_user/Screens/Authentication/signup/ViewModel/SignupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "SignupViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C275528F-C71B-478A-91C8-E70FE131C16E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MultiBranch_restaurant_user/Screens/Authentication/Login/ViewModel/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "getFBUserData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

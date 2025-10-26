@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+let key_Type = "Type"
+let key_facebook = "key_facebook"
+
+
 
 var keyWindow = UIApplication.shared.connectedScenes
     .filter({$0.activationState == .foregroundActive})

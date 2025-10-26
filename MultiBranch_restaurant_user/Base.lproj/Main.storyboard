@@ -74,24 +74,67 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iGi-92-m9H">
-                                <rect key="frame" x="151.66666666666666" y="504.66666666666674" width="90" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iGi-92-m9H">
+                                <rect key="frame" x="136.66666666666666" y="504.66666666666674" width="119.99999999999997" height="50"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_facebook" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-yE-4BG">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8im-F8-RQh" userLabel="View Google">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_google" translatesAutoresizingMaskIntoConstraints="NO" id="BN3-qU-lMd">
+                                                <rect key="frame" x="10" y="9.9999999999999432" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="ZkB-kw-g6i"/>
+                                                    <constraint firstAttribute="height" constant="30" id="jzS-P7-aZ8"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v13-qx-Q53">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="I5n-iW-lJ2"/>
-                                            <constraint firstAttribute="height" constant="30" id="qdj-me-QTe"/>
+                                            <constraint firstItem="v13-qx-Q53" firstAttribute="leading" secondItem="8im-F8-RQh" secondAttribute="leading" id="0Lf-kU-dGM"/>
+                                            <constraint firstItem="BN3-qU-lMd" firstAttribute="centerX" secondItem="8im-F8-RQh" secondAttribute="centerX" id="JOG-Hu-5rO"/>
+                                            <constraint firstAttribute="bottom" secondItem="v13-qx-Q53" secondAttribute="bottom" id="ZOJ-3b-fg8"/>
+                                            <constraint firstAttribute="trailing" secondItem="v13-qx-Q53" secondAttribute="trailing" id="eZk-UW-Hj6"/>
+                                            <constraint firstItem="BN3-qU-lMd" firstAttribute="centerY" secondItem="8im-F8-RQh" secondAttribute="centerY" id="lAh-MN-67e"/>
+                                            <constraint firstItem="v13-qx-Q53" firstAttribute="top" secondItem="8im-F8-RQh" secondAttribute="top" id="sNH-dB-IIX"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_google" translatesAutoresizingMaskIntoConstraints="NO" id="zUr-FY-ybe">
-                                        <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1o-Xh-Tmx" userLabel="View Facebook">
+                                        <rect key="frame" x="70" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_facebook" translatesAutoresizingMaskIntoConstraints="NO" id="fVc-ey-zos">
+                                                <rect key="frame" x="10" y="9.9999999999999432" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="31L-RX-eXj"/>
+                                                    <constraint firstAttribute="width" constant="30" id="Rvb-qW-E1H"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAE-wq-LOm">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="btnTap_Facebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pb6-oU-zuF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="YTq-39-kZX"/>
-                                            <constraint firstAttribute="width" constant="30" id="hxI-hp-bDq"/>
+                                            <constraint firstItem="VAE-wq-LOm" firstAttribute="leading" secondItem="a1o-Xh-Tmx" secondAttribute="leading" id="NXe-NI-Jwo"/>
+                                            <constraint firstAttribute="trailing" secondItem="VAE-wq-LOm" secondAttribute="trailing" id="RDv-lf-n3m"/>
+                                            <constraint firstItem="VAE-wq-LOm" firstAttribute="top" secondItem="a1o-Xh-Tmx" secondAttribute="top" id="T8U-uz-qty"/>
+                                            <constraint firstItem="fVc-ey-zos" firstAttribute="centerY" secondItem="a1o-Xh-Tmx" secondAttribute="centerY" id="TIg-tt-9lp"/>
+                                            <constraint firstAttribute="bottom" secondItem="VAE-wq-LOm" secondAttribute="bottom" id="VgI-xE-YZt"/>
+                                            <constraint firstItem="fVc-ey-zos" firstAttribute="centerX" secondItem="a1o-Xh-Tmx" secondAttribute="centerX" id="Vrc-pW-UCl"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EGo-ZP-As8"/>
+                                    <constraint firstAttribute="width" constant="120" id="SxI-pd-T5i"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhG-Oo-tF9">
                                 <rect key="frame" x="16" y="749.66666666666663" width="361" height="34.333333333333371"/>
@@ -359,7 +402,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
